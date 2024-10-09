@@ -1,0 +1,403 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: user asks about examination general guidelines
+  steps:
+  - intent: ask_examination_general_guidelines
+  - action: utter_examination_general_guidelines
+
+- story: user asks about attendance requirement
+  steps:
+  - intent: ask_attendance_requirement
+  - action: utter_attendance_requirement
+
+- story: user asks about exam eligibility
+  steps:
+  - intent: ask_exam_eligibility
+  - action: utter_exam_eligibility
+
+- story: user asks about fee clearance
+  steps:
+  - intent: ask_fee_clearance
+  - action: utter_fee_clearance
+
+- story: user asks about identity card requirement
+  steps:
+  - intent: ask_identity_card_requirement
+  - action: utter_identity_card_requirement
+
+- story: user asks about disciplinary actions during exams
+  steps:
+  - intent: ask_examination_disciplinary_actions
+  - action: utter_examination_disciplinary_actions
+
+- story: user asks about supplementary exams
+  steps:
+  - intent: ask_supplementary_exams
+  - action: utter_supplementary_exams
+
+- story: user asks about special cases
+  steps:
+  - intent: ask_special_cases
+  - action: utter_special_cases
+
+- story: user asks about amanuensis policy
+  steps:
+  - intent: ask_amanuensis_policy
+  - action: utter_amanuensis_policy
+
+- story: user asks about result declaration
+  steps:
+  - intent: ask_results_declaration
+  - action: utter_results_declaration
+
+- story: user asks about unfair means
+  steps:
+  - intent: ask_unfair_means
+  - action: utter_unfair_means
+
+- story: user asks about grievance redressal
+  steps:
+  - intent: ask_grievance_redressal
+  - action: utter_grievance_redressal
+
+# SUPPLEMENTARY EXAM START
+
+- story: register_supplementary_exam path
+  steps:
+  - intent: what_supplementary_exam
+  - action: utter_supplementary_exams
+  - intent: register_supplementary_exam
+  - action: utter_register_supplementary_exam
+
+- story: fee_supplementary_exam path
+  steps:
+  - intent: fee_supplementary_exam
+  - action: utter_fee_supplementary_exam
+
+- story: multiple_subjects_supplementary_exam path
+  steps:
+  - intent: multiple_subjects_supplementary_exam
+  - action: utter_multiple_subjects_supplementary_exam
+
+- story: syllabus_supplementary_exam path
+  steps:
+  - intent: syllabus_supplementary_exam
+  - action: utter_syllabus_supplementary_exam
+
+- story: attempt_limit_supplementary_exam path
+  steps:
+  - intent: attempt_limit_supplementary_exam
+  - action: utter_attempt_limit_supplementary_exam
+
+- story: schedule_supplementary_exam path
+  steps:
+  - intent: schedule_supplementary_exam
+  - action: utter_schedule_supplementary_exam
+
+- story: consequence_fail_regular_exam path
+  steps:
+  - intent: consequence_fail_regular_exam
+  - action: utter_consequence_fail_regular_exam
+
+- story: grade_system_supplementary_exam path
+  steps:
+  - intent: grade_system_supplementary_exam
+  - action: utter_grade_system_supplementary_exam
+
+- story: consequence_fail_supplementary_exam path
+  steps:
+  - intent: consequence_fail_supplementary_exam
+  - action: utter_consequence_fail_supplementary_exam
+
+- story: fail_both_exams path
+  steps:
+  - intent: fail_both_exams
+  - action: utter_fail_both_exams
+
+# SUPPLEMENTARY EXAM END
+
+# PSC EXAM STARTS
+
+- story: what_is_psc_path
+  steps:
+  - intent: what_PSC
+  - action: utter_what_is_PSC
+
+- story: enroll_psc path
+  steps:
+  - intent: enroll_psc
+  - action: utter_enroll_psc
+
+- story: fee_psc path
+  steps:
+  - intent: fee_psc
+  - action: utter_fee_psc
+
+- story: multiple_subjects_psc path
+  steps:
+  - intent: multiple_subjects_psc
+  - action: utter_multiple_subjects_psc
+
+- story: attendance_psc path
+  steps:
+  - intent: attendance_psc
+  - action: utter_attendance_psc
+
+- story: class_teacher_psc path
+  steps:
+  - intent: class_teacher_psc
+  - action: utter_class_teacher_psc
+
+- story: class_location_psc path
+  steps:
+  - intent: class_location_psc
+  - action: utter_class_location_psc
+
+- story: exam_schedule_psc path
+  steps:
+  - intent: exam_schedule_psc
+  - action: utter_exam_schedule_psc
+
+- story: result_psc path
+  steps:
+  - intent: result_psc
+  - action: utter_result_psc
+
+- story: status_psc path
+  steps:
+  - intent: status_psc
+  - action: utter_status_psc
+
+- story: grade_system_psc path
+  steps:
+  - intent: grade_system_psc
+  - action: utter_grade_system_psc
+
+- story: fail_psc_exam path
+  steps:
+  - intent: fail_psc_exam
+  - action: utter_fail_psc_exam
+
+- story: fail_psc_supplementary_exam path
+  steps:
+  - intent: fail_psc_supplementary_exam
+  - action: utter_fail_psc_supplementary_exam
+
+- story: class_location_psc_juniors path
+  steps:
+  - intent: class_location_psc_juniors
+  - action: utter_class_location_psc_juniors
+
+# PSC EXAM ENDS
+
+# !!---CLAN POINTS START---!!
+
+- story: explain clan points
+  steps:
+  - intent: explain_clan_points
+  - action: utter_explain_clan_points
+
+- story: how to earn clan points
+  steps:
+  - intent: earning_clan_points
+  - action: utter_earning_clan_points
+
+- story: clan points requirements
+  steps:
+  - intent: clan_points_requirements
+  - action: utter_clan_points_requirements
+
+- story: how to track clan points
+  steps:
+  - intent: tracking_clan_points
+  - action: utter_tracking_clan_points
+
+- story: impact of clan points
+  steps:
+  - intent: impact_of_clan_points
+  - action: utter_impact_of_clan_points
+
+- story: specific clan points
+  steps:
+  - intent: specific_clan_points
+  - action: utter_specific_clan_points
+
+- story: clan points lateral entry
+  steps:
+  - intent: ask_clan_points_lateral_entry
+  - action: utter_clan_points_lateral_entry
+
+- story: problems with clan points
+  steps:
+  - intent: problems_with_clan_points
+  - action: utter_problems_with_clan_points
+
+- story: checking clan points
+  steps:
+  - intent: checking_clan_points
+  - action: utter_checking_clan_points
+
+- story: specific activity clan points
+  steps:
+  - intent: specific_activity_clan_points
+  - action: utter_specific_activity_clan_points
+
+- story: problems with clan points system
+  steps:
+  - intent: problems_with_clan_points_system
+  - action: utter_problems_with_clan_points_system
+
+- story: specific clan points requirements
+  steps:
+  - intent: specific_clan_points_requirements
+  - action: utter_specific_clan_points_requirements
+
+# !!---CLAN POINTS END---!!
+
+
+#  !! --- !! PLACEMENTS SECTION START !! --- !!
+
+- story: ask_about_crc
+  steps:
+    - intent: ask_about_crc
+    - action: utter_ask_about_crc
+
+- story: when_placement
+  steps:
+    - intent: when_placement
+    - action: utter_when_placement
+
+- story: placement_eligibility
+  steps:
+    - intent: placement_eligibility
+    - action: utter_placement_eligibility
+
+- story: what_superset
+  steps:
+    - intent: what_superset
+    - action: utter_what_superset
+
+- story: how_superset_registration
+  steps:
+    - intent: how_superset_registration
+    - action: utter_how_superset_registration
+
+- story: superset_issues
+  steps:
+    - intent: superset_issues
+    - action: utter_superset_issues
+
+#- story: what_to_study_for_placement
+#  steps:
+#    - intent: what_to_study_for_placement
+#    - action: utter_what_to_study_for_placement
+
+- story: placement_process
+  steps:
+    - intent: placement_process
+    - action: utter_placement_process
+
+- story: placement_coordinators
+  steps:
+    - intent: placement_coordinators
+    - action: utter_placement_coordinators
+
+- story: placement_guidelines
+  steps:
+    - intent: placement_guidelines
+    - action: utter_placement_guidelines
+
+- story: placement_offers
+  steps:
+    - intent: placement_offers
+    - action: utter_placement_offers
+
+- story: campus_placement_process
+  steps:
+    - intent: campus_placement_process
+    - action: utter_campus_placement_process
+
+- story: offcampus_placement_process
+  steps:
+    - intent: offcampus_placement_process
+    - action: utter_offcampus_placement_process
+
+- story: alumni_network
+  steps:
+    - intent: alumni_network
+    - action: utter_alumni_network
+
+- story: placement_statistics
+  steps:
+    - intent: placement_statistics
+    - action: utter_placement_statistics
+
+- story: what_is_placement
+  steps:
+    - intent: what_is_placement
+    - action: utter_what_is_placement
+
+- story: placement_backlog
+  steps:
+    - intent: placement_backlog
+    - action: utter_placement_backlog
+
+- story: masters_plan_placement
+  steps:
+    - intent: masters_plan_placement
+    - action: utter_masters_plan_placement
+
+- story: placements_CGPA
+  steps:
+    - intent: placements_CGPA
+    - action: utter_placements_CGPA
+
+- story: placement_advice
+  steps:
+    - intent: placement_advice
+    - action: utter_placement_advice
+
+- story: how_to_prepare_placement
+  steps:
+    - intent: how_to_prepare_placement
+    - action: utter_how_to_prepare_placement
+
+- story: placement_mru_vs_mriirs
+  steps:
+    - intent: placement_mru_vs_mriirs
+    - action: utter_placement_mru_vs_mriirs
+
+- story: what_is_placement_policy
+  steps:
+    - intent: what_is_placement_policy
+    - action: utter_what_is_placement_policy
+#  !! --- !! PLACEMENTS SECTION END !! --- !!

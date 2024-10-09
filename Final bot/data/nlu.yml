@@ -1,0 +1,826 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+
+- intent: ask_examination_general_guidelines
+  examples: |
+    - What are the general guidelines for examinations?
+    - Can you tell me the general examination rules?
+    - What should I know about the examination guidelines?
+    - Please explain the examination regulations.
+    
+
+- intent: ask_attendance_requirement
+  examples: |
+    - What is the attendance requirement for exams?
+    - How much attendance is needed to sit for the exams?
+    - Tell me about the attendance criteria.
+    - Do I need a certain percentage of attendance to take the exam?
+
+- intent: ask_exam_eligibility
+  examples: |
+    - Am I eligible to take the exam?
+    - What makes a student eligible for exams?
+    - What are the eligibility criteria for appearing in the examination?
+    - Can you explain the exam eligibility rules?
+
+- intent: ask_fee_clearance
+  examples: |
+    - Do I need to clear all fees before the exams?
+    - What are the fee clearance rules for examinations?
+    - Can I sit for the exam without paying the fees?
+    - Is fee clearance mandatory before exams?
+
+- intent: ask_identity_card_requirement
+  examples: |
+    - Do I need to carry my identity card for exams?
+    - Is the identity card necessary during exams?
+    - What happens if I don't have my ID card in the exam hall?
+    - Tell me about the ID card requirement for exams.
+
+- intent: ask_examination_disciplinary_actions
+  examples: |
+    - What happens if I misbehave in the exam hall?
+    - What are the disciplinary actions during exams?
+    - Can I be expelled for misconduct during exams?
+    - Explain the disciplinary rules for examinations.
+
+- intent: ask_supplementary_exams
+  examples: |
+    - What is the policy on supplementary exams?
+    - Can I take a supplementary exam if I fail?
+    - What are the rules for supplementary examinations?
+    - How do supplementary exams work?
+
+- intent: ask_special_cases
+  examples: |
+    - What happens if I'm sick during the exam?
+    - Are there special considerations for missing an exam due to illness?
+    - How does the university handle special cases during exams?
+    - What are the policies for students who miss exams due to emergencies?
+
+- intent: ask_amanuensis_policy
+  examples: |
+    - Can I get a scribe for my exams?
+    - What is the amanuensis policy?
+    - Under what conditions is an amanuensis allowed?
+    - Tell me about the scribe policy for disabled students.
+
+- intent: ask_results_declaration
+  examples: |
+    - When will the exam results be declared?
+    - How are the results declared?
+    - What is the process for result declaration?
+    - Tell me about the result declaration timeline.
+
+- intent: ask_unfair_means
+  examples: |
+    - What if I'm caught using unfair means during exams?
+    - What are the consequences of cheating in exams?
+    - Explain the policy on unfair means during examinations.
+    - What actions are taken against cheating in exams?
+
+- intent: ask_grievance_redressal
+  examples: |
+    - How can I file a grievance about the exam?
+    - What is the process for examination grievances?
+    - Who do I contact for exam-related complaints?
+    - Explain the grievance redressal process for examinations.
+
+
+# SUPPLEMENTARY EXAM START
+
+- intent: what_supplementary_exam
+  examples: |
+    - What is supplementary exam?
+    - what is supply?
+    - tell me something about supplementary exam?
+    - what is supple?
+
+- intent: register_supplementary_exam
+  examples: |
+    - How do I register for a supplementary exam?
+    - What is the process to register for a supplementary exam?
+    - Can you tell me how to register for a supplementary exam?
+    - I want to register for a supplementary exam. How do I do that?
+
+- intent: fee_supplementary_exam
+  examples: |
+    - Is there a fee for supplementary exams?
+    - Do I need to pay for supplementary exams?
+    - How much does it cost to take a supplementary exam?
+    - Is there any charge for supplementary exams?
+
+- intent: multiple_subjects_supplementary_exam
+  examples: |
+    - Can I take supplementary exams for multiple subjects?
+    - Is it possible to take supplementary exams for more than one subject?
+    - Can I register for supplementary exams in multiple subjects?
+    - Can I appear for supplementary exams in several subjects?
+
+- intent: syllabus_supplementary_exam
+  examples: |
+    - What is the syllabus for supplementary exams?
+    - Can you provide the syllabus for supplementary exams?
+    - What topics are covered in supplementary exams?
+    - Where can I find the syllabus for supplementary exams?
+
+- intent: attempt_limit_supplementary_exam
+  examples: |
+    - How many times can I attempt a supplementary exam?
+    - Is there a limit to the number of attempts for supplementary exams?
+    - How many attempts are allowed for supplementary exams?
+    - Can I retake a supplementary exam multiple times?
+    - What if i fail in both supplementary attempts.
+    - I have not cleared the two supplementary attempts.
+
+- intent: schedule_supplementary_exam
+  examples: |
+    - When are supplementary exams conducted?
+    - What is the schedule for supplementary exams?
+    - When will the supplementary exams be held?
+    - Can you tell me the dates for supplementary exams?
+
+- intent: consequence_fail_regular_exam
+  examples: |
+    - What happens if I fail a subject in regular exams?
+    - What are the consequences of failing a subject in regular exams?
+    - If I fail in regular exams, what should I do?
+    - What is the next step if I fail a regular exam?
+
+- intent: grade_system_supplementary_exam
+  examples: |
+    - What is the grade system for supplementary exams?
+    - Which grade i will get in supplementary.
+    - How many marks i will get in supplementary exam.
+    - How are grades awarded in supplementary exams?
+    - Can you explain the grading system for supplementary exams?
+    - What grading system is used for supplementary exams?
+    - How many marks required to clear the supplementary exam.
+
+
+- intent: consequence_fail_supplementary_exam
+  examples: |
+    - What if I fail in supplementary exam?
+    - What are the consequences of failing a supplementary exam?
+    - What should I do if I fail a supplementary exam?
+    - If I fail a supplementary exam, what happens next?
+
+- intent: fail_both_exams
+  examples: |
+    - What if I fail both supplementary attempts?
+    - What if I fail both supplementary exams?
+    - What happens if I fail both supplementary exams?
+    - What should I do if I fail both supplementary exams?
+    - If I fail both supplementary exams, what are the next steps?
+
+# SUPPLEMENTARY EXAM END
+
+
+# PSC EXAM START
+
+- intent: what_PSC
+  examples: |
+    - What is PSC?
+    - What is a difference between PSC and supplementary.
+    - What is previous semester course (PSC).
+    - Tell me about PSC.
+    - Tell me something about PSC.
+
+- intent: enroll_psc
+  examples: |
+    - How do I enroll in courses from previous semesters?
+    - How can I register for previous semester courses?
+    - What is the process to enroll in PSC?
+    - How do I apply for previous semester courses?
+    - How to enroll in PSC.
+    - I want to register for PSC.
+
+- intent: fee_psc
+  examples: |
+    - Is there a fee for PSC?
+    - Do I need to pay for PSC?
+    - How much does it cost to take PSC?
+    - Is there any charge for previous semester courses?
+    - How much fees i have to pay for PSC.
+    - What is a fee for the PSC course.
+
+- intent: multiple_subjects_psc
+  examples: |
+    - Can I take PSC for multiple subjects?
+    - Is it possible to take PSC for more than one subject?
+    - Can I enroll in multiple PSC subjects?
+    - Can I take multiple subjects under PSC?
+    - How to register for multiple PSC subjects.
+    - How can i enroll to multiple PSC subjects.
+
+- intent: attendance_psc
+  examples: |
+    - Will PSC attendance be shown in my ERP?
+    - Is PSC attendance visible in ERP?
+    - Can I see my PSC attendance in ERP?
+    - Will my PSC attendance be updated in ERP?
+    - Whats attendance criteria for PSC.
+    - How will i get PSC attendance.
+    - How will i get my PSC attendance.
+
+- intent: class_teacher_psc
+  examples: |
+    - How do I know who is my PSC class teacher?
+    - How can I find out my PSC class teacher?
+    - Who is my PSC class teacher?
+    - How do I find out about my PSC class instructor?
+    - How do I know who is my PSC faculty?
+    - How can I find out my PSC faculty?
+    - Who is my PSC faculty?
+    - How do I find out about my PSC faculty?
+    
+
+- intent: class_location_psc
+  examples: |
+    - How do I know where my PSC classes are?
+    - where my psc classes held.
+    - Where will my PSC classes be held?
+    - What is the location of my PSC classes?
+    - How can I find out where my PSC classes are?
+    - Where i can attend my PSC classes.
+
+- intent: exam_schedule_psc
+  examples: |
+    - When will my PSC exam be held?
+    - What is the schedule for PSC exams?
+    - When is the PSC exam?
+    - When will PSC exams take place?
+    - How will be PSC exams taken.
+    - Will my PSC exams will be held with juniors.
+
+- intent: result_psc
+  examples: |
+    - When will my PSC result be shown?
+    - When will the PSC results be released?
+    - When will my PSC grades be available?
+    - When can I see my PSC results?
+    - Where i will get my PSC result.
+    - How is PSC result declared.
+
+- intent: status_psc
+  examples: |
+    - How can I know if my PSC is cleared or not?
+    - How do I find out if I passed PSC?
+    - How can I check if my PSC is cleared?
+    - How will I know if I passed my PSC?
+
+- intent: grade_system_psc
+  examples: |
+    - What is the grade system for PSC exams?
+    - How are grades awarded in PSC exams?
+    - Can you explain the grading system for PSC?
+    - What grading system is used for PSC?
+    - How many marks i will get in PSC exam.
+    - Is their any grading system for PSC.
+
+- intent: fail_psc_exam
+  examples: |
+    - What if I fail in PSC exam?
+    - What happens if I fail a PSC exam?
+    - What should I do if I fail a PSC exam?
+    - If I fail a PSC exam, what happens next?
+
+- intent: fail_psc_supplementary_exam
+  examples: |
+    - What if I fail both PSC and supplementary exams?
+    - What happens if I fail both PSC and supplementary exams?
+    - What should I do if I fail both PSC and supplementary exams?
+    - If I fail both PSC and supplementary exams, what are the next steps?
+
+- intent: class_location_psc_juniors
+  examples: |
+    - Where will be my PSC class held?
+    - Where will PSC classes take place?
+    - What is the location of PSC classes with juniors?
+    - Where are my PSC classes held?
+    - What is a time table of PSC classes.
+
+# PSC EXAM END
+
+
+# !!---CLAN POINTS START---!!
+
+
+- intent: explain_clan_points
+  examples: |
+    - What are clan points?
+    - Can you explain clan points?
+    - What is the purpose of clan points?
+    - Why do we need clan points?
+    - What are clan points and how are they earned?
+
+- intent: earning_clan_points
+  examples: |
+    - How do I earn clan points?
+    - What activities can give me clan points?
+    - How can I get more clan points?
+    - What are the ways to earn clan points?
+    - Are there specific activities that yield higher clan points?
+
+- intent: clan_points_requirements
+  examples: |
+    - How many clan points do I need to graduate?
+    - What is the clan points requirement?
+    - How many points are needed?
+    - Is it necessary to complete 100 clan points?
+    - How many clan points for a 4-year program?
+
+- intent: tracking_clan_points
+  examples: |
+    - How can I check my clan points?
+    - Where can I find my clan points?
+    - How do I track my clan points?
+    - How many clan points do I have?
+    - How do we get clan points?
+
+- intent: impact_of_clan_points
+  examples: |
+    - Do clan points affect my placements?
+    - Will clan points help in my career?
+    - How do clan points impact my resume?
+    - Are clan points important for placements?
+    - What is the importance of clan points?
+
+- intent: specific_clan_points
+  examples: |
+    - How many clan points do I have right now?
+    - What are my current clan points?
+    - Can you tell me my clan points?
+    - How many clan points have I scored?
+    - How many clan points do we have?
+
+- intent: ask_clan_points_lateral_entry
+  examples: |
+    - How are clan points adjusted for lateral entry students?
+    - Do lateral entry students need fewer clan points?
+    - What about clan points for migrating students?
+    - Are there different clan points requirements for lateral entry students?
+
+
+- intent: problems_with_clan_points
+  examples: |
+    - Why is it mandatory to be a part of a clan and collect clan points?
+    - Don't you think we require transparency while working on these clan points?
+    - Shouldn't there be more information regarding how clan points are awarded?
+    - Why are clans not active enough if it's mandatory to collect clan points?
+    - Can it be a more systematic manner to do these things?
+
+- intent: checking_clan_points
+  examples: |
+    - How do I get to know my clan points?
+    - How to check clan points?
+    - Where can I check my clan points?
+    - How to track clan points?
+    - Where to check clan points?
+
+- intent: specific_activity_clan_points
+  examples: |
+    - How many clan points will I get if I participate in any games?
+    - How many clan points for participating in sports?
+    - How many clan points do I get for volunteering?
+    - How many clan points do I get for a research paper?
+    - How many clan points will I get for winning a game?
+
+- intent: problems_with_clan_points_system
+  examples: |
+    - Are there penalties for losing clan points?
+    - Can we share clan points?
+    - Why is the clan system not updated in ERP to tally?
+    - How can we ensure the reliability of clan points awarded?
+
+- intent: specific_clan_points_requirements
+  examples: |
+    - How many clan points are required for a degree?
+    - Are 100 clan points required to get our degree?
+    - Can I get my degree certificate if clan points are less?
+    - Is it compulsory to collect points?
+    - Is clan points required in degree?
+
+
+# !!---CLAN POINTS END---!!
+
+
+# !!---PLACEMENTS START---!!
+
+- intent: ask_about_crc   #placement cell contact
+  examples: |
+    - what is CRC?
+    - What is placement cell?
+    - What is career resource centre?
+    - What does the placement cell do?
+    - What does career resource centre do?
+    - What does CRC do?
+    - Where is CRC located?
+    - where can I find CRC?
+    - Is placement cell different for MRU and MRIIRS?
+    - Give me the contact number of CRC.
+    - How do I contact CRC?
+    - Where is the placement cell?
+    - Where is the placement cell of MRU?
+    - Where can I find the placement cell?
+    - Give me the room number of the placement cell.
+    - What are the working hours of CRC?
+    - Can I visit CRC for placement-related queries?
+    - Who is the head of the placement cell?
+    - Is there an email address to contact CRC?
+
+- intent: when_placement
+  examples: |
+    - When will placement start?
+    - When does placement begin? 
+    - I am in BTech CSE, when will placement start?
+    - When will my placement start?
+    - In which year will placement start?
+    - In which semester does placement start?
+    - When will companies come for placements?
+    - When will companies start visting campaus>
+    - When will campus placement begin?
+    - Whe will placement drive begin?
+    - I am in 4th year, when will my placement start?
+    - When do placements usually begin?
+    - What is the schedule for the placement season?
+    - When is the first company visiting the campus for placements?
+
+- intent: placement_eligibility
+  examples: |
+    - What is the eligibility criteria for placement?
+    - What are the placement rules?
+    - What are the placement eligibility criteria?
+    - How do I know if I am eligible for placements?
+    - What are the academic requirements for placements?
+    - Are there any attendance requirements for placements?
+    - Do I need to clear all my subjects to be eligible for placements?
+    - Is there a minimum CGPA required for placements?
+    - Can students with backlogs sit for placements?
+    - Are there any disciplinary criteria for placement eligibility?
+
+- intent: what_superset
+  examples: |
+    - What is a superset portal?
+    - What is Superset?
+    - Is it compulsory to register on Superset?
+    - Is Superset used for placements?
+    - What is the purpose of the Superset portal?
+    - How does the Superset portal help in placements?
+    - Is Superset registration mandatory for all students?
+    - Can I apply for placements without registering on Superset?
+    - What information do I need to provide on Superset?
+    - Does Superset charge any fees for registration?
+
+- intent: how_superset_registration
+  examples: |
+    - How to register on Superset portal?
+    - How can I register on Superset?
+    - Give me the steps on how to register on Superset.
+    - What are the steps for registration on Superset?
+    - How do I create an account on Superset?
+    - Can you guide me through the Superset registration process?
+    - Is there a tutorial for Superset registration?
+    - What documents do I need to register on Superset?
+    - How long does it take to register on Superset?
+    - Is there any support available for Superset registration issues?
+
+- intent: superset_issues
+  examples: |
+    - I am not able to apply for a job on Superset.
+    - My Superset account is freezed.
+    - My Superset is not working.
+    - I have a problem with my Superset account.
+    - I am unable to apply for a job on Superset.
+    - I am unable to register on Superset.
+    - I want to change my details on Superset.
+    - How can I reset my Superset password?
+    - My application is not showing on Superset.
+    - Who should I contact for Superset issues?
+    - How do I update my profile on Superset?
+    - Can I delete my Superset account and create a new one?
+
+- intent: placement_process
+  examples: |
+    - What is the placement process?
+    - Tell me the placement process.
+    - What is the campus placement process?
+    - Is there any process for campus placements?
+    - What is the process of placements?
+    - How do campus placements work?
+    - What are the steps involved in the placement process?
+    - Can you explain the placement process in detail?
+    - What happens during the placement season?
+    - Are there any specific procedures for different companies?
+    - How does the interview process work in campus placements?
+    - Is there any orientation for the placement process?
+
+- intent: placement_coordinators
+  examples: |
+    - Who is the placement coordinator?
+    - How do I contact the placement coordinator?
+    - Who is the MRU placement coordinator?
+    - Where can I meet the placement coordinator?
+    - I want to meet the placement coordinator.
+    - Can I meet the placement coordinator?
+    - What is the role of a placement coordinator?
+    - How can a placement coordinator help me?
+    - Is there a list of placement coordinators?
+    - Can I email the placement coordinator?
+    - Who are the student placement coordinators?
+    - How are placement coordinators assigned?
+
+- intent: placement_guidelines
+  examples: |
+    - What are the placement guidelines?
+    - Give me some placement guidelines.
+    - What are the rules for placements?
+    - Are there any rules for campus placements?
+    - What are the placement rules?
+    - Can you provide the placement guidelines?
+    - What should I follow during the placement process?
+    - Are there any dos and don'ts for placements?
+    - Where can I find the placement guidelines document?
+    - Are there any specific dress codes for placements?
+    - What are the behavioral guidelines for placements?
+
+- intent: placement_offers
+  examples: |
+    - How many offers can I have?
+    - If I am selected in one company, can I apply for others?
+    - Can I accept multiple placement offers?
+    - What if I get multiple offers?
+    - How does the placement offer process work?
+    - Can I reject a placement offer?
+    - What happens if I decline an offer?
+    - Is there a limit on the number of offers I can accept?
+    - Can I negotiate the offer terms with the company?
+    - What should I do after receiving a placement offer?
+
+- intent: campus_placement_process
+  examples: |
+    - What is the process of campus placement?
+    - What is campus placement?
+    - How does campus placement work?
+    - Can you explain the campus placement process?
+    - What are the steps in campus placement?
+    - Is campus placement different from off-campus placement?
+    - How are companies selected for campus placement?
+    - What should I prepare for campus placements?
+    - Are campus placements compulsory?
+    - How do I participate in campus placements?
+
+- intent: offcampus_placement_process
+  examples: |
+    - What if I want to go for off-campus placement?
+    - What if I want to go for an off-campus job?
+    - Can I apply for off-campus placement?
+    - Can I apply for an off-campus job?
+    - What if I get selected for an off-campus job?
+    - How does off-campus placement work?
+    - Are off-campus placements better than campus placements?
+    - Can I attend off-campus placement drives?
+    - What are the steps for off-campus placements?
+    - Do I need permission for off-campus placements?
+
+- intent: alumni_network
+  examples: |
+    - How can I connect to alumni?
+    - How do I contact college alumni?
+    - Where can I find college alumni?
+    - Is there an alumni network for our college?
+    - Can I get in touch with alumni for career advice?
+    - How can alumni help in placements?
+    - Are there any alumni events organized?
+    - How do I join the alumni network?
+    - Can I get references from alumni?
+    - Are alumni involved in the placement process?
+
+- intent: placement_statistics
+  examples: |
+    - Show me last year's placement statistics.
+    - How many students got placed last year?
+    - How many students were selected in on-campus placements?
+    - Can I see the placement statistics?
+    - What are the placement stats for the previous batch?
+    - How successful were the placements last year?
+    - What percentage of students got placed last year?
+    - Which companies recruited the most students?
+    - How many offers were made last year?
+    - Can you share the placement report for the last year?
+
+- intent: what_is_placement
+  examples: |
+    - What are placements?
+    - What is campus placement?
+    - What is a placement drive?
+    - Can you explain what placements are?
+    - How do placements work?
+    - What is the purpose of campus placements?
+    - What happens during a placement drive?
+    - Are placements only for final year students?
+    - What types of jobs are offered during placements?
+    - Do placements include internships?
+
+- intent: placement_backlog
+  examples: |
+    - If I have a backlog, can I sit for campus placements?
+    - If I have a backlog, can I apply for placements?
+    - I have a backlog, can I apply for placements?
+    - I have a backlog, can I get placements?
+    - Does a backlog affect placements?
+    - What is an active and dead backlog?
+    - Can I get placement if I have a dead backlog?
+    - Can I apply for placements if I have cleared my backlog?
+    - If I have a PSC, can I sit for campus placements?
+    - If I have a PSC, can I apply for placements?
+    - I have a PSC, can I apply for placements?
+    - I have a PSC, can I get placements?
+    - Does PSC affect placements?
+    - Will my backlog impact my chances of getting placed?
+    - How should I handle backlogs during placement season?
+
+- intent: masters_plan_placement
+  examples: |
+    - I want to go for masters, do I have to apply for campus placements?
+    - I want to go for masters, do I have to sit for placements?
+    - I don't want to apply for placements as I plan to go for masters.
+    - What if I plan to go for masters?
+    - Should I participate in placements if I want to pursue a master's degree?
+    - Can I skip placements if I am planning for further studies?
+    - How to balance between placements and preparing for masters?
+    - Is it advisable to sit for placements if I aim for a master's degree?
+    - What should I consider if I am thinking about a master's instead of placements?
+    - Can I defer my placement offer if I decide to go for a master's program?
+
+- intent: placements_CGPA
+  examples: |
+    - How much CGPA is required to sit for placements?
+    - How much CGPA is required for placements?
+    - Is there any CGPA criteria for placements?
+    - How much CGPA should I maintain for placements?
+    - Tell me about CGPA requirements for placements.
+    - Is a 7 CGPA good for placements?
+    - Will I be able to sit for placements if I have a low CGPA?
+    - Can I get placement if I have a low CGPA?
+    - How much CGPA is required to get placements?
+    - What is the minimum CGPA for placement eligibility?
+    - Does CGPA matter in placements?
+    - Can a high CGPA increase my chances of getting placed?
+    - What if my CGPA is below the required threshold?
+    - Are there companies that do not consider CGPA for placements?
+
+- intent: placement_advice
+  examples: |
+    - What are some tips for placements?
+    - Give me some guidance for placements.
+    - Give me some advice for placements.
+    - How should I prepare for placements?
+    - What are the best practices for placement preparation?
+    - Can you provide some placement tips?
+    - What should I focus on for placements?
+    - Any advice for succeeding in placements?
+    - What mistakes should I avoid during placements?
+    - How can I improve my chances of getting placed?
+
+- intent: how_to_prepare_placement
+  examples: |
+    - What should I study for placements?
+    - How to prepare for campus placements?
+    - How to prepare for placements?
+    - From where should I study for campus placements?
+    - How to study DSA for campus placements?
+    - Is DSA important for campus placements?
+    - How to prepare for placements?
+    - What should I prepare for placements?
+    - When should I prepare for the placements?
+    - What should I study for the placements?
+    - Should I study DSA for placements?
+    - From where should I prepare for placements?
+    - How to prepare DSA for placements?
+    - How to prepare data structures for placements.
+    - From where should I study data structures.
+    - When should I start learning data structures for placements.
+    - How to balance academics and placement preparation?
+    - Are there any online resources for placement preparation?
+    - How important are soft skills in placement preparation?
+
+- intent: placement_mru_vs_mriirs
+  examples: |
+    - Does the placement drive of MRIIRS and MRU occur together?
+    - Are placements of MRIIRS and MRU held together?
+    - Will MRIIRS students and MRU students sit together in placements?
+    - Are placements of MRIIRS better than MRU?
+    - Whose placements are better, MRIIRS or MRU?
+    - How many students sit for placements in total?
+    - Is the placement process the same for MRIIRS and MRU?
+    - Do MRIIRS and MRU have separate placement cells?
+    - Are companies different for MRIIRS and MRU placements?
+    - Can MRU students apply for MRIIRS placement drives?
+    - Are there any joint placement events for MRU and MRIIRS?
+    - How does the placement rate compare between MRIIRS and MRU?
+    - Do MRIIRS students get more placement opportunities than MRU students?
+
+- intent: what_is_placement_policy
+  examples: |
+    - What is placement policy?
+    - placement policy?
+    - What is a campus placement policy?
+
+
+# !!--- !! PLACEMENTS END !!---!!
+# WHOM TO CONTACT EXAM SECTION REMAINING
+
+
+# Add more intents and examples as necessary

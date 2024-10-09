@@ -1,0 +1,402 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_examination_general_guidelines             #General Examination
+  - ask_attendance_requirement
+  - ask_exam_eligibility
+  - ask_fee_clearance
+  - ask_identity_card_requirement
+  - ask_examination_disciplinary_actions
+  - ask_supplementary_exams
+  - ask_special_cases
+  - ask_amanuensis_policy
+  - ask_results_declaration
+  - ask_unfair_means
+  - ask_grievance_redressal
+  - what_supplementary_exam            # SUPPLEMENTARY EXAM
+  - register_supplementary_exam
+  - fee_supplementary_exam
+  - multiple_subjects_supplementary_exam
+  - syllabus_supplementary_exam
+  - attempt_limit_supplementary_exam
+  - schedule_supplementary_exam
+  - consequence_fail_regular_exam
+  - grade_system_supplementary_exam
+  - consequence_fail_supplementary_exam
+  - fail_both_exams
+  - what_PSC
+  - enroll_psc                                        # PSC EXAM
+  - fee_psc
+  - multiple_subjects_psc
+  - attendance_psc
+  - class_teacher_psc
+  - class_location_psc
+  - exam_schedule_psc
+  - result_psc
+  - status_psc
+  - grade_system_psc
+  - fail_psc_exam
+  - fail_psc_supplementary_exam
+  - class_location_psc_juniors
+  - explain_clan_points              #CLAN POINTS
+  - earning_clan_points
+  - clan_points_requirements
+  - tracking_clan_points
+  - impact_of_clan_points
+  - specific_clan_points
+  - ask_clan_points_lateral_entry
+  - problems_with_clan_points
+  - checking_clan_points
+  - specific_activity_clan_points
+  - problems_with_clan_points_system
+  - specific_clan_points_requirements  # Placements
+  - ask_about_crc
+  - when_placement
+  - placement_eligibility
+  - what_superset
+  - how_superset_registration
+  - superset_issues
+  - what_to_study_for_placement
+  - placement_process
+  - placement_coordinators
+  - placement_guidelines
+  - placement_offers
+  - campus_placement_process
+  - offcampus_placement_process
+  - alumni_network
+  - placement_statistics
+  - what_is_placement
+  - placement_backlog
+  - masters_plan_placement
+  - placements_CGPA
+  - placement_advice
+  - how_to_prepare_placement
+  - placement_mru_vs_mriirs
+  - what_is_placement_policy
+
+
+
+responses:
+  utter_greet:
+    - text: "Hey! How can I help you?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+
+  utter_examination_general_guidelines:
+    - text: |
+        "To be eligible for exams you must follow following guidelines.
+                - You must have at least 75% attendance in each course.
+                - You should carry your ID card.
+                - All fee dues should be clear.
+                - You should carry valid Admit card (End-term exam).
+                - Maintain academic integrity."
+
+  utter_attendance_requirement:
+    - text: |
+         You must have at least 75% attendance in each course. Otherwise it will lead to detention.
+
+
+  utter_exam_eligibility:
+    - text: |
+              Eligibility criteria for exams includes
+                - Regular attendance.
+                - Completion of assignments.
+                - Fee clearance.
+
+  utter_fee_clearance:
+    - text: |
+          You need to clear all outstanding fees to be eligible to sit for the exams. Which includes :-
+                  - Academic fees.
+                  - Library fine.
+                  - And any other remaining dues and fine.
+          
+
+  utter_identity_card_requirement:
+    - text: |
+          It is mandatory to carry your university identity card to the exam hall. 
+          For any special case contact examination department.
+
+  utter_examination_disciplinary_actions:
+    - text: "Any misconduct during exams can lead to disciplinary actions, including expulsion from the exam hall and cancellation of your exam."
+
+
+# !!----  SUPPLEMENTARY EXAMS START ---- !!
+
+  utter_supplementary_exams:
+    - text: "Supplementary exams are offered for students who fail or miss an exam due to valid reasons."
+
+  utter_register_supplementary_exam:                 #LINK Steps pdf
+    - text: |
+         You can register for a supplementary exam through the university's online ERP portal.
+         For detailed steps , please refer to the [Steps : ](https://drive.google.com/file/d/1RPGdYP-ryKuJIyvAnuA__KSTPxLUb4mY/view?usp=sharing).
+
+
+  utter_fee_supplementary_exam:
+    - text: "Yes, there is a fee for supplementary exams. Please check the university online ERP portal"
+
+  utter_multiple_subjects_supplementary_exam:
+    - text: "Yes, you can take supplementary exams for multiple subjects. You will need to register for each subject individually."
+
+  utter_syllabus_supplementary_exam:   #CLASH WITH CLAN ANSWER
+    - text: "The syllabus for supplementary exams is the same as the regular exams. You can refer to your course materials and textbooks.For more information contact the subject faculty."
+
+  utter_attempt_limit_supplementary_exam:
+    - text: "You can attempt a supplementary exam up to two times. In case you don't pass in two attempts it will turn into PSC. "
+
+  utter_schedule_supplementary_exam:
+    - text: "Supplementary exams are usually conducted a few weeks after the regular exams. Department will notify you whenever supplementary exams are scheduled."
+
+  utter_consequence_fail_regular_exam:
+    - text: "If you fail a subject in regular exams, you can register for a supplementary exam to retake the subject. Your result will be updated after supplementary result declaration"
+
+  utter_grade_system_supplementary_exam:
+    - text: "The student who have cleared his/her subject(s) in supplementary examination will be awarded a maximum grade of B+ (equivalent to 55%). However, for special cases (sickness or any other emergency), maximum grades that student can obtain is A+ (75%)."
+
+  utter_consequence_fail_supplementary_exam:
+    - text: "If you fail a supplementary exam in first attempt, you can retake it in the next available session. But after two sessions that subject will be converted to PSC."
+
+  utter_fail_both_exams:
+    - text: "If you fail both attempts of supplementary exams, you will need to repeat the subject in the next academic year as a PSC course."
+
+# !!----  SUPPLEMENTARY EXAMS END ---- !!
+
+
+  utter_special_cases:
+    - text: |
+          As per university rules in special cases such as illness, you must submit a medical certificate, medical form and other required documents which after verification can be considered for an alternative exam. For any other reason or information contact your university. 
+
+  utter_amanuensis_policy:
+    - text: "Amanuensis or scribes are allowed under specific conditions for students with disabilities. Please contact your university for more information."
+
+
+# !!--- Examination Result Section Start -- !!
+
+  utter_results_declaration:
+    - text: "Results are typically declared within 30 days of the last exam date. Result will be displayed on university noticeboard as well as will be sent to you via Email and Whatsapp"
+
+# !!--- Examination Result Section End -- !!
+
+
+#-- UNFAIR MEAN DURING EXAM START ---!
+
+  utter_unfair_means:
+    - text: "Using unfair means during exams is strictly prohibited and can result in severe penalties, including suspension."
+
+#  !--- UNFAIR MEAN DURING EXAM START ---!!
+
+
+  utter_grievance_redressal:
+    - text: "For any exam-related grievances, you can contact the examination office or file a complaint through the university's grievance redressal system."
+
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+# !!--- PSC EXAM --!!
+
+  utter_what_is_PSC:
+    - text: "PSC stands for previous semester course. In case a student get detained due to low attendance or a student fails to clear any subject in two supplementary attempts. That subject is considered as PSC."
+
+  utter_enroll_psc:        #LINK
+    - text: "For enrolling in PSC, you have to apply from ERP in the subject you have failed."  #LInk
+
+  utter_fee_psc:
+    - text: "Yes, there is a fee of 2000 per credit for PSC."
+
+  utter_multiple_subjects_psc:
+    - text: "Yes, you can take PSC for multiple subjects."
+
+  utter_attendance_psc:
+    - text: "Yes you will get PSC attendance, it will show in ERP after tagging the subject. Contact your mentor for more information. "
+
+  utter_class_teacher_psc:
+    - text: "You have to talk to your mentor to know your PSC class teacher."
+
+  utter_class_location_psc:
+    - text: "You have to talk to your mentor to find out the location of your PSC classes. Usually PSC classes held with juniors as per their time table."
+
+  utter_exam_schedule_psc:
+    - text: "PSC exams will be taken with your juniors as per their regular exam schedule."
+
+  utter_result_psc:
+    - text: "The PSC result will be shown with the your junior's results. It will be displayed on university notice board and will also be sent to you on mail by your class mentor."
+
+  utter_status_psc:
+    - text: "After you pass the PSC subject, it will be cleared."
+
+  utter_grade_system_psc:
+    - text: "The grade system for PSC exams is the same as the regular exams."
+
+  utter_fail_psc_exam:
+    - text: "If you fail a PSC exam, you have to fill the PSC supplementary exam until you clear it."
+
+  utter_fail_psc_supplementary_exam:
+    - text: "You have to refill the PSC form and clear it in the next following semester."
+
+  utter_class_location_psc_juniors:
+    - text: "The PSC classes will be held with your juniors. As per their time table. Contact your class mentor for more information. "
+# !!--- PSC END--!!
+
+
+# !!---CLAN POINTS START---!!
+  utter_explain_clan_points:
+    - text: | 
+        Clan points are awarded for participation in various activities. They serve as a measure of engagement and contribution within the university community.
+        You can learn more through the official clan point policy [here :](https://tinyurl.com/yjwatbrd).
+
+  utter_earning_clan_points:
+    - text: | 
+        You can earn clan points through various activities such as:
+        - Being a member of a clan
+        - Volunteering for clan activities
+        - Participating in university or clan level events
+        - Organizing or being a committee member in events
+        - Winning competitions
+        Check the official clan point policy to find more ways to earn clan points [here :](https://tinyurl.com/yjwatbrd) 
+
+  utter_clan_points_requirements:
+    - text: |
+        For a programme of normal duration of ‘n’ years the total minimum number of points to be earned shall be ’25 x n’.  Points can be earned through a variety of activities. Refer to the official clan point policy for more information. [here :](https://tinyurl.com/yjwatbrd).
+
+  utter_tracking_clan_points:
+    - text: |
+        Currently we do not have any system to check clan points you can calculate manually by summing all the clan points of activities you participated.
+        To check number of clan points associated to particular activity click the following link[here :](https://tinyurl.com/ynmbupvf).
+
+  utter_impact_of_clan_points:
+    - text: |
+        Clan points can enhance your resume and might positively impact your placements by showcasing your active participation in extracurricular activities. 
+
+  utter_specific_clan_points:
+    - text: |
+        You can sum up the clan points associated to each activity you participated. To check the list of activities and their corresponding clan points click the following link [here :](https://tinyurl.com/ynmbupvf).
+
+  utter_clan_points_lateral_entry:
+    - text: |
+        For lateral entry or migrating students, the clan points required are adjusted based on the semester or year of entry.
+
+  utter_problems_with_clan_points:
+    - text: |
+        We understand your concerns regarding clan points. The administration is working to ensure transparency and efficiency in the system. You can provide feedback [here](http://example.com/feedback).
+
+  utter_checking_clan_points:
+    - text: |
+        To check your clan points, log into the university portal and navigate to the Clan Points section. Detailed steps are available [here](http://example.com/check_clan_points).
+
+  utter_specific_activity_clan_points:
+    - text: |
+        The number of clan points awarded for each activity varies. For example:
+        visit [here :](https://tinyurl.com/ynmbupvf).
+
+  utter_problems_with_clan_points_system:
+    - text: |
+        The administration is continuously working to improve the clan points system. If you have specific concerns or suggestions, please share them [here :](https://forms.gle/e5MwYC54B8HjaA297).
+
+  utter_specific_clan_points_requirements:
+    - text: |
+        To receive your degree, you need to earn minimum of 25 clan points per year as per your course duration. If you have fewer points, please participate in more activities to meet the requirement. To find different ways to earn clan points refer the following link [here :](https://tinyurl.com/ynmbupvf).
+
+# !!---CLAN POINTS END---!!
+#  utter_default:
+#    - text: "I am sorry, I didn't understand that. Let me check..."
+#
+
+#  !! --- !! PLACEMENTS SECTION START !! --- !!
+  utter_ask_about_crc:
+    - text: "The Carrier Resource Centre (CRC), also known as the placement cell, assists students with placement activities. You can visit CRC at room number AG14."
+
+  utter_when_placement:
+    - text: "Placement activities generally start in the final year of your course. Specific timelines will be communicated by the CRC."
+
+  utter_placement_eligibility:
+    - text: "Eligibility criteria for placements typically set by recruiting companies. They usually prefer good academic performance."
+
+  utter_what_superset:
+    - text: "The Superset portal is an online platform used for placement registration and job applications. Registration on Superset is mandatory for participating in campus placements. CRC will guide you for it."
+
+  utter_how_superset_registration:   # !!-- LINK
+    - text: "To register on the Superset portal, visit the official website, create an account, and fill in the required details. Follow the on-screen instructions for a step-by-step guide."
+
+  utter_superset_issues:  # -- CONTACT
+    - text: "If you face issues with the Superset portal contact Ms. Ashi - 8800323995 for assistance."
+
+#  utter_what_to_study_for_placement:
+#    - text: "To prepare for placements, focus on core subjects, data structures, algorithms, and aptitude tests. Refer to previous placement papers and study materials."
+
+  utter_placement_process:
+    - text: "The placement process typically involves apply for specific company on superset, eligibility verification and then the selected students go through various assessments like technical test, aptitude , group discussion and HR interview."
+
+  utter_placement_coordinators:
+    - text: "Placement Coordinators help manage the placement activities. You can contact placement coordinator (MRU) Dr. Mamta Arora at Ph. : 9873599315 ."
+
+  utter_placement_guidelines:
+    - text: "Placement guidelines include maintaining good conduct, adhering to dress codes, and following the rules set by CRC during placement activities."
+
+  utter_placement_offers:
+    - text: "You can apply for multiple companies until you accept an offer. If selected, you may still explore better opportunities as per CRC rules. Contact CRC for more details."
+
+  utter_campus_placement_process:
+    - text: "For campus placements you have to apply for the companies through superset portal. After applying series of tests and interviews conducted by companies visiting the campus."
+
+  utter_offcampus_placement_process:
+    - text: "Yes you can also apply for the job offcampus. For off-campus placements, you can apply directly to companies through their career portals or job boards."
+
+  utter_alumni_network:
+    - text: "You can connect with alumni through the university's alumni network, social media, or CRC-organized events."
+
+  utter_placement_statistics:
+    - text: "Last year, a significant number of students were placed in various companies. For detailed statistics, please visit the CRC office (AG14)."
+
+  utter_what_is_placement:
+    - text: "Placements refer to the process where companies recruit students from the campus for job roles after series of assessments and tests."
+
+  utter_placement_backlog:
+    - text: "Students with backlogs may have limited opportunities in placements as most of the companies don't consider students with  the backlog. Ensure to clear any active backlogs before participating in campus placements."
+
+  utter_masters_plan_placement:
+    - text: "If you plan to pursue a master's degree, you may choose to opt-out of placements. Consult with CRC for guidance and support. They will  guide you for master's."
+
+  utter_placements_CGPA:
+    - text: "There is no CGPA criteria from university in depends on the company. Aim for a CGPA of 7 or above for better opportunities."
+
+  utter_placement_advice:
+    - text: "For placements, practice data structures, aptitude, improve your resume, and enhance your interview skills."
+
+  utter_how_to_prepare_placement:
+    - text: "Start early with your preparations. Focus on  data structures, core subjects like DBMS, SE, OS etc. , and aptitude."
+
+  utter_placement_mru_vs_mriirs:
+    - text: "Placements for MRU and MRIIRS are conducted together, with equal opportunities. Contact CRC for further information."
+
+  utter_what_is_placement_policy:
+    - text: |
+            For detailed placement policy please visit the following link [here :](https://tinyurl.com/Placement-Poicy).
+
+
+#  !! --- !! PLACEMENTS SECTION END !! --- !!
+
+
+
+session_config:
+  session_expiration_time: 80
+  carry_over_slots_to_new_session: true
+
